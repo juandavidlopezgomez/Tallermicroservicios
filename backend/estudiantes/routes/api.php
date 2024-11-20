@@ -15,6 +15,6 @@ Route::prefix('app')->group(function () {
     // Rutas para notas
     Route::get('/notas/{codEstudiante}', [NotaController::class, 'obtenerNotas']);
     Route::post('/notas', [NotaController::class, 'store']);
-    Route::put('/nota/{id}', [NotaController::class, 'update']);
-    Route::delete('/nota/{id}', [NotaController::class, 'destroy']);
+    Route::put('/notas/{id}', [NotaController::class, 'update']);
+    Route::delete('/notas/{id}', [NotaController::class, 'destroy']);
 });

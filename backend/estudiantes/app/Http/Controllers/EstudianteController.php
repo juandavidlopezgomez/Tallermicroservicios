@@ -7,14 +7,14 @@ use Illuminate\Http\JsonResponse;
 
 class EstudianteController extends Controller
 {
-    // Listar todos los estudiantes
+   
     public function index(): JsonResponse
     {
         $estudiantes = Estudiante::all();
         return response()->json(['data' => $estudiantes], 200);
     }
 
-    // Crear un nuevo estudiante
+
     public function store(Request $request): JsonResponse
     {
         $validated = $request->validate([
@@ -27,7 +27,7 @@ class EstudianteController extends Controller
         return response()->json(['data' => $estudiante], 201);
     }
 
-    // Obtener un estudiante por su ID
+    
     public function show($id): JsonResponse
     {
         $estudiante = Estudiante::find($id);
@@ -37,7 +37,7 @@ class EstudianteController extends Controller
         return response()->json(['data' => $estudiante], 200);
     }
 
-    // Actualizar un estudiante
+  
     public function update(Request $request, $id): JsonResponse
     {
         $estudiante = Estudiante::find($id);
@@ -54,7 +54,7 @@ class EstudianteController extends Controller
         return response()->json(['data' => $estudiante], 200);
     }
 
-    // Eliminar un estudiante
+ 
     public function destroy($id): JsonResponse
     {
         $estudiante = Estudiante::find($id);
