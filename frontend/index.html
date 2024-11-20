@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Estudiantes y Notas</title>
+    <script defer src="js/estudiantes.js"></script>
+</head>
+<body>
+    <h1>Gestión de Estudiantes y Notas</h1>
+
+    <!-- Sección para Estudiantes -->
+    <section>
+        <h2>Estudiantes</h2>
+        <table id="tablaEstudiantes">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <form id="formEstudiante">
+            <input type="number" id="codigo" placeholder="Código" required>
+            <input type="text" id="nombres" placeholder="Nombre" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="submit">Agregar Estudiante</button>
+        </form>
+    </section>
+
+    <!-- Sección para Notas -->
+    <section>
+        <h2>Notas de Estudiante</h2>
+        <table id="tablaNotas">
+            <thead>
+                <tr>
+                    <th>Actividad</th>
+                    <th>Nota</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <form id="formNota">
+            <input type="text" id="actividad" placeholder="Actividad" required>
+            <input type="number" id="nota" placeholder="Nota (0-5)" step="0.01" required>
+            <button type="submit">Agregar Nota</button>
+        </form>
+    </section>
+</body>
+</html>
